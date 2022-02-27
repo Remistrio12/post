@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %} {% endblock title%}
+{% block content%}
+<div class = 'container'>
+    <ul>
+        {% for post in posts %}
+        <hr>
+        <li>{{ post.title }}</li>
+        <li>{{ post.author }}</li>
+        <li>{{post.body}}  </li>
+        <hr>
+        {% endfor %}
+    </ul>
+</div>
+<!--<div class = 'pagination'>-->
+<!--    <span class = "step-links">-->
+<!--        {% if page_obj.has_previous %}-->
+<!--            <a href = '?page=1'>first</a>-->
+<!--            <a href='?page={{ page_obj.previous_page_number }}'>previous</a>-->
+<!--        {% endif %}-->
+<!--    </span>-->
+<!--        <span class='curent'>-->
+<!--            <p> page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }} </p>-->
+<!--        </span>-->
+<!--    <span class='navigations'>-->
+<!--        <a href='?page={{ page_obj.next_page_number }}'>next</a>-->
+<!--        <a href='?page={{ page_obj.paginator.num_pages }}'>last</a>-->
+<!--    </span>-->
+<!--</div>-->
+
+{% endblock content %}
